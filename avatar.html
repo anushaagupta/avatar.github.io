@@ -1,0 +1,98 @@
+<DOCTYPE>
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Funny Avatars</title>
+	<!--bootstrap css-->
+	  
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
+	  
+
+    <!--jQuery libraries--> 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script src="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"></script>
+
+    <!--Latest compiled and minified JavaScript--> 
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!--stylesheet-->
+      <link rel="stylesheet" href="avatar.css">
+
+    <!--SEO meta tags-->
+	  <meta charset="utf-8">
+	  <meta type="description" content="This page is all about giving nourishment to brain with help of some amazing quotes.These quotes will motivate the one to achieve their goals">
+	  <meta type="keywords" content="Quotes,Quotations,Love quotes,motivational quotes,quotes,inspirational quotes">
+	  <meta type="robot" content="selection">
+	  <meta type="viewport" content="width=device-width,initial-scale=1.0">
+
+	<!--google fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+
+	<!-- header-->
+ <div class="container-fluid">
+ <center>
+ 	<div id="header">
+      <h1>Welcome, to the Avatar World!!!</h1>
+    </div>
+
+    <!--label-->
+    <div id="main">
+      <label>Enter your name </label><br>
+      <input type="text" name="name" id="getname"><br>
+     
+    </div>
+
+    <!--image-->
+    <div>
+        <img src="file:///home/anushaa/Documents/img/avatar.jpg"  width="60%" class="image-responsive" id="getimg" alt="avatar">
+        <h4>Its just for fun</h4>
+    </div>
+
+    <!--script-->
+    <script type="text/JavaScript">
+    	$(document).ready(function(){
+    		$(".two").hide();
+    		$("h4").hide();
+            $(".one").click(function(){
+            	const name=$("#getname").val();
+            	
+            	alert(`Hello ${name}!\nClick OK to see Your Avatar`);
+            	
+            		$("#getimg").attr('src',`https://joeschmoe.io/api/v1/${name}`);
+            	    const next=$("#getimg");
+            	    console.log(next);
+            	$("h4").show();
+            	$(".two").show();
+            	$(".two").click(function(){
+                   $("#getimg").attr('src',"file:///home/anushaa/Documents/img/avatar.jpg");
+                   $(".two").hide();
+                   $("h4").hide();
+
+            	});
+
+    		});
+    	});
+    </script>
+
+    <!--button-->
+    <button type="btn" class=" one btn btn-danger">Click Me</button>
+    <button type="btn" class=" two btn btn-danger">back</button>
+
+     <!--footer-->
+  <footer>
+  	<hr>Copyright &copy; 2020 <a href="https://www.linkedin.com/in/anushaagupta" target="_blank">Anushaa Gupta</a>
+  </footer>
+
+ </center>
+
+
+
+ </div>
+</body>
+</html>
